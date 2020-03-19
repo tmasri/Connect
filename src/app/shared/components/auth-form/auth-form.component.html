@@ -1,0 +1,32 @@
+<div class="form">
+    <div class="title">
+        {{ type | uppercase }}
+    </div>
+    <mat-form-field *ngIf="type === 'signup'">
+        <input
+            [(ngModel)]="name"
+            matInput
+            placeholder="Name">
+    </mat-form-field>
+    
+    <mat-form-field>
+        <input
+            [(ngModel)]="email"
+            matInput
+            placeholder="Email"
+            email>
+    </mat-form-field>
+    
+    <mat-form-field>
+        <input
+            [(ngModel)]="password"
+            matInput
+            type="password"
+            placeholder="Password">
+    </mat-form-field>
+    <button mat-raised-button class="auth-form-button" color="primary" *ngIf="type === 'login'" (click)="submit()">Login</button>
+    <button mat-raised-button class="auth-form-button" color="primary" *ngIf="type === 'signup'" (click)="submit()">Signup</button>
+
+    <a [routerLink]="['/signup']" *ngIf="type === 'login'">Signup</a>
+    <a [routerLink]="['/login']" *ngIf="type === 'signup'">Login</a>
+</div>

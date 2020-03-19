@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public title: string = 'Connect';
+  public title: string = 'New-Connect';
+
+  constructor() {}
+
 }
