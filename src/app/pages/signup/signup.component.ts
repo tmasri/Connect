@@ -21,6 +21,6 @@ export class SignupComponent implements OnInit {
 
     public onSignup(user: User): void {
         this._auth.signup(user);
-      }
+    }
 
 }
