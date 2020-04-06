@@ -26,10 +26,20 @@ export class AuthFormComponent implements OnInit {
     }
 
     public submit(): void {
-        const values: User = {
-            email: this.email,
-            password: this.password
-        };
+
+        let values: User;
+        if (this.type === FormType.SIGNUP) {
+            values = {
+                name: this.name,
+                email: this.email,
+                password: this.password
+            };
+        } else {
+            values = {
+                email: this.email,
+                password: this.password
+            };
+        }
 
         this.values.emit(values);
     }

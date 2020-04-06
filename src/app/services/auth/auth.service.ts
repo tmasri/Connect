@@ -10,11 +10,11 @@ export class AuthService {
     constructor(private _http: HttpClient) {}
 
     public login(user: User): void {
-        // this._http.post('/login', user).subscribe(data => {
-        // });
+        // http get
     }
 
     public signup(user: User): void {
+        // http post
     }
 
 }
