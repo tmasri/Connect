@@ -45,6 +45,6 @@ describe('AuthFormComponent', () => {
         testHostComponent.formType = FormType.LOGIN;
 
         expect(testHostComponent).toBeTruthy();
-    })
+    });
 
 });

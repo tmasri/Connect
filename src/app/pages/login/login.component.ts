@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { User } from 'src/app/models/user.model';
 import { FormType } from 'src/app/models/auth-form-enum.model';
 
 @Component({
-    selector: 'app-login',
+    selector: 'connect-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss']
 })

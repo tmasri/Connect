@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormType } from 'src/app/models/auth-form-enum.model';
 import { User } from 'src/app/models/user.model';
 
