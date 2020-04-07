@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     public startListening(): void {
         this._connect.getLink();
         this.link = this._connect.getLinkListener().subscribe(link => {
-            this._openLink(link)
+            this._openLink(link);
         });
     }
 
