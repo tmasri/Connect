@@ -27,6 +27,7 @@ export class AuthFormComponent implements OnInit {
 
     public submit(): void {
         const values: User = {
+            id: 'soidnfpausbdglkndgpae',
             email: this.email,
             password: this.password
         };
