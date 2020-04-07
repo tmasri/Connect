@@ -17,7 +17,7 @@ import { FormType } from 'src/app/models/auth-form-enum.model';
 class TestHostComponent {
 }
 
-describe('AuthFormLogo', () => {
+describe('LoginComponent', () => {
 
     let testHostComponent: TestHostComponent;
     let loginComponent: LoginComponent;

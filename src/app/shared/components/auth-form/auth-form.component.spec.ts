@@ -21,7 +21,7 @@ class TestHostComponent {
     }
 }
 
-describe('AuthFormLogo', () => {
+describe('AuthForm', () => {
 
     let fixture: ComponentFixture<TestHostComponent>;
     let testHostComponent: TestHostComponent;
