@@ -1,4 +1,11 @@
 <div class="home">
     {{ data.email }}
-    <button (click)="startListening()">Listen</button>
+    <button (click)="startListening()">Listen</button><br>
+    <mat-form-field>
+        <input
+            [(ngModel)]="sendLink"
+            matInput
+            placeholder="Link">
+    </mat-form-field>
+    <button mat-raised-button class="auth-form-button" color="primary" (click)="send()">Login</button>
 </div>

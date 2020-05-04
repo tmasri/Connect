@@ -1,5 +1,5 @@
 export interface SendLink {
-    linkId?: string;
-    link?: string;
-    userId: string;
+    shared_id?: string;
+    shared_value?: string;
+    user_id: string;
 }

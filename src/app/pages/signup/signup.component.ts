@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
-import { NgForm } from '@angular/forms';
 import { User } from 'src/app/models/user.model';
 import { FormType } from 'src/app/models/auth-form-enum.model';
 
