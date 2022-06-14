@@ -6,6 +6,7 @@ import { SendLink } from 'src/app/models/send-link.model';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../auth/auth.service';
 import { User } from 'src/app/models/user.model';
+import { Socket } from 'ngx-socket-io';
 
 const URL = '';
 
@@ -15,14 +16,25 @@ const URL = '';
 export class ConnectService {
     private _links: Subject<LinkRecieved> = new Subject();
     private _user: User = null;
+    currentLink = this.socket.fromEvent<LinkRecieved>('link');
+    documents = this.socket.fromEvent<string[]>('links');
 
     constructor(
         private socketService: WebsocketService,
         private _http: HttpClient,
-        private _auth: AuthService) {
+        private _auth: AuthService,
+        private socket: Socket) {
         // this.socketService.connect(URL).subscribe(data  => {
         //     console.log(data)
         // });
+    }
+
+    public getLinkSocket(): void {
+        this.socket.emit('/api/link/get', localStorage.getItem('user_id'));
+    }
+
+    public removeLinkSocket(link: LinkRecieved): void {
+        this.socket.emit('/api/link/delete', link);
     }
 
     public getLink(): void {

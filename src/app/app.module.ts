@@ -19,6 +19,10 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { AuthFormLogoComponent } from './shared/components/auth-form-logo/auth-form-logo.component';
 import { AuthFormComponent } from './shared/components/auth-form/auth-form.component';
 
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+const config: SocketIoConfig = { url: 'http://localhost:4444', options: {} };
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +42,7 @@ import { AuthFormComponent } from './shared/components/auth-form/auth-form.compo
     MatCardModule,
     MatInputModule,
     MatButtonModule,
+    SocketIoModule.forRoot(config)
   ],
   providers: [],
   bootstrap: [AppComponent]
